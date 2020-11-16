@@ -27,11 +27,12 @@ def squared_root_num(num):
 @app.route('/login', methods=['GET', 'POST'])
 def result():
     if request.method == 'POST':
-        result = request.form
-        return result
+        attempted_username = request.form['username']
+        attempted_password = request.form['password']
     else:
         return f"this was a {request.method}"
 
 if __name__ == '__main__':
-    print(soup.prettify())
     app.run(debug=True)
+
+    

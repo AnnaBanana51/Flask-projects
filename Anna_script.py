@@ -31,7 +31,6 @@ def scrapper(url):
     return new_table
 
 if __name__ == "__main__":
-    output_to_file = open('Anna-covid-report.csv', 'w')
-    writefile = csv.writer(output_to_file)
-    writefile.writerows(scrapper(url))
-    output_to_file.close()
+    app.run(debud=True)
+    
+    

@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Cocvid data</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <header>
+      <h1>Covid19 death and recovery rates table</h1>
+    </header>
+      <table>
+          <tr>
+              <td><b>Country</b><td>
+              <td><b>Cases</b><td>
+              <td><b>Death</b><td>
+              <td><b>Recoveries</b><td>
+              <td><b>Death Rate</b><td>
+              <td><b>Recovery Rate</b><td>
+          </tr>
+          {% for row in data}
+          <tr>
+              {% for item in row %}
+              <td> {{item}}
+              {% endfor %}
+          </tr>
+      </table>   
+  </body>
+    
